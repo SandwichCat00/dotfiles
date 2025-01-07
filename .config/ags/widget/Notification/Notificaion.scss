@@ -1,0 +1,119 @@
+@use "sass:string";
+@use "../../catppuccin-mocha" as *;
+
+$error: red;
+
+window.NotificationPopups {
+    all: unset;
+}
+
+eventbox.Notification {
+
+    button {
+        all: unset;
+    }
+    
+    &:first-child > box {
+        margin-top: 1rem;
+    }
+
+    &:last-child > box {
+        margin-bottom: 1rem;
+    }
+
+    > box {
+        min-width: 400px;
+        border-radius: 13px;
+        background-color: $Base;
+        margin: 0.5rem 1rem 0.5rem 1rem;
+        border: 1pt solid $Overlay1;
+    }
+
+    &.critical > box {
+        border: 1pt solid $Red;
+
+        .header {
+            .app-name {
+                color: $Maroon;
+            }
+
+            .app-icon {
+                color: $Red;
+            }
+        }
+    }
+
+    .header {
+        padding: 0.5rem;
+        color: $Overlay2;
+
+        .app-icon {
+            margin: 0 0.4rem;
+        }
+
+        .app-name {
+            margin-right: 0.3rem;
+            font-weight: bold;
+
+            &:first-child {
+                margin-left: 0.4rem;
+            }
+        }
+
+        .time {
+            margin: 0 0.4rem;
+        }
+
+        button {
+            padding: 0.2rem;
+            min-width: 0;
+            min-height: 0;
+        }
+    }
+
+    separator {
+        margin: 0 0.4rem;
+        background-color: $Overlay1;
+    }
+
+    .content {
+        margin: 1rem;
+        margin-top: 0.5rem;
+
+        .summary {
+            font-size: 1.2em;
+            color: $Text;
+        }
+
+        .body {
+            color: $Subtext1;
+        }
+
+        .image {
+            border: 1px solid $Overlay1;
+            margin-right: 0.5rem;
+            border-radius: 9px;
+            min-width: 100px;
+            min-height: 100px;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    .actions {
+        margin: 1rem;
+        margin-top: 0;
+
+        button {
+            margin: 0 0.3rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

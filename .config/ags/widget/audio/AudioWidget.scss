@@ -1,0 +1,39 @@
+@use "../../catppuccin-mocha" as *;
+
+
+.audio-container {
+    padding: 0.7rem;
+    padding-right: 35rem;
+    padding-left: 45rem;
+    min-width: 300px;
+
+    .volume-box {
+        padding: 1rem;
+        background-color: $Base;
+        border-radius: 8px;
+        margin: 0;
+        padding: 0 0.6rem;
+
+        icon {
+            font-size: 18px;
+        }
+        scale {
+            margin: 0;
+            padding: 0 0.6rem;
+            
+              highlight {
+                background-color: $Mauve;
+                color: $Text;
+                min-height: 25px;
+                border-radius: 0;
+              }
+              slider {
+                box-shadow: none;
+                min-height: 25px;
+                min-width: 25px;
+                background-color: $Text;
+              }
+            
+          }
+    }
+}

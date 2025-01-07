@@ -1,0 +1,102 @@
+@use "../../catppuccin-mocha" as *;
+@use "sass:string";
+
+@function gtkalpha($c, $a) {
+    @return string.unquote("alpha(#{$c},#{$a})");
+}
+
+window.bar {
+
+    background: transparent;
+    color: $Text;
+    font-weight: bold;
+    font-size: large;
+
+    .panel {
+        background: gtkalpha($Base, 0.8);
+        
+        border-radius: 10px;
+        border: 2px solid $Mauve;
+        margin: 4px;
+        margin-bottom: 0px;
+    }
+
+    .workspaces {
+        
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 8px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    
+    .workspace {
+        background-color: $Maroon;
+        border-radius: 999px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 2px;
+        margin-right: 2px;
+        font-size: x-small;
+        
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        transition: padding-left 0.1s;
+        transition: padding-right 0.1s;
+        &.active {
+
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+            background-color: $Flamingo;
+
+        }
+    }
+
+    .time {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .bluetooth {
+        color: $Sky;
+        margin-right: 10px;
+    }
+
+    .audio {
+        color: $Yellow;
+    }
+
+    .network {
+        color: $Mauve;
+    }
+
+    .battery-charing {
+        color: $Green;
+    }
+    .battery-draining {
+        color: $Red;
+    }
+    .icon {
+        padding-right: 2px;
+    }
+    
+    button {
+        all: unset;
+        margin: 2px;
+        margin-left: 10px;
+    }
+    .distro {
+        font-size: x-large;
+        padding: 0px;
+        margin: 2px;
+        margin-left: 10px;
+    }
+    .notifications {
+        margin-right: 10px;
+        color: $Rosewater;   
+    }
+    button:hover {
+        color: $Blue;
+    }
+    
+}

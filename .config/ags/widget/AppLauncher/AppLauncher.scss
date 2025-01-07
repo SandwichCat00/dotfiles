@@ -1,0 +1,67 @@
+@use "../../catppuccin-mocha" as *;
+@use "sass:string";
+
+@function gtkalpha($c, $a) {
+    @return string.unquote("alpha(#{$c},#{$a})");
+}
+
+window.app-launcher {
+    all: unset;
+
+    box.Applauncher {
+        border-radius: 11px;
+        margin: 30rem;
+        margin-top: 3rem;
+        min-height: 400px;
+        min-width: 450px;
+        padding: .8rem;
+        background-color: gtkalpha($Base, 0.9);
+        border: 2px $Flamingo solid;
+        
+        entry {
+            margin-bottom: .8rem;
+            background-color: $Crust;
+            color: $Text;
+        }
+
+        button {
+            all: unset;
+            padding: .5rem;
+
+            icon {
+                font-size: 3em;
+                margin-right: .3rem;
+            }
+
+            label.name {
+                font-weight: bold;
+                font-size: 1.1em
+            }
+
+            label.description {
+                color: $Subtext0;
+            }
+            
+        }
+        button:focus {
+            background-color: $Crust;
+        }
+        button:hover {
+            background-color: $Crust;
+        }
+
+        box.not-found {
+            padding: 1rem;
+
+            icon {
+                font-size: 6em;
+                color: $Text;
+            }
+
+            label {
+                color: $Text;
+                font-size: 1.2em;
+            }
+        }
+    }
+}
